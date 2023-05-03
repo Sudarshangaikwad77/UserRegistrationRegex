@@ -4,6 +4,7 @@ import java.util.regex.*;
 public class ValidateUserInfo {
     Scanner sc = new Scanner(System.in);
 
+   //First name starts with Cap and has minimum 3 characters
     public void checkFirstName(){
         System.out.print("Enter The First Name: ");
         String firstName = sc.nextLine();
@@ -16,6 +17,7 @@ public class ValidateUserInfo {
             System.out.println("Invalid Input");
         }
     }
+   // Last name starts with Cap and has minimum 3 characters
     public void checkLastName(){
         System.out.print("Enter Valid Last Name: ");
         String lastName = sc.nextLine();
@@ -26,6 +28,7 @@ public class ValidateUserInfo {
             System.out.println("Invalid LastName!!");
         }
     }
+    // Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions
     public void checkValidEmail(){
         System.out.print("Enter Valid Mail: ");
         String email = sc.nextLine();
@@ -36,6 +39,7 @@ public class ValidateUserInfo {
             System.out.println("Wrong Email!!");
         }
     }
+    // Country code follow by space and 10 digit number
     public void checkMobileNum(){
         System.out.print("Enter Valid Mobile Number: ");
         String mobNum = sc.nextLine();
@@ -46,11 +50,12 @@ public class ValidateUserInfo {
             System.out.println("Invalid Number!!");
         }
     }
+    //rules-- minimum 8,Should have at least 1 Upper Case,Should have at least 1 numeric number in the password,
     public void checkPasswd(){
         System.out.print("Enter Valid Password: ");
         String passwd = sc.nextLine();
 
-        if (Pattern.matches("^(?=.*[A-Z][a-z]).{8,}$", passwd)){
+        if (Pattern.matches("^(?=.*[A-Z])(?=.*[a-z][0-9]).{8,}$", passwd)){
             System.out.println("Password is Correct!");
         }else {
             System.out.println("Wrong Password!");
