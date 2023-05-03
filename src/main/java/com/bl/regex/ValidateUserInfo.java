@@ -50,12 +50,12 @@ public class ValidateUserInfo {
             System.out.println("Invalid Number!!");
         }
     }
-    //rules-- minimum 8,Should have at least 1 Upper Case,Should have at least 1 numeric number in the password,
+    //rules-- minimum 8,Should have at least 1 Upper Case,Should have at least 1 numeric number in the password,– Has exactly 1 Special Character
     public void checkPasswd(){
         System.out.print("Enter Valid Password: ");
         String passwd = sc.nextLine();
 
-        if (Pattern.matches("^(?=.*[A-Z])(?=.*[a-z][0-9]).{8,}$", passwd)){
+        if (Pattern.matches("\"^(?=.*[A-Z])(?=.*[a-z][0-9])(?=.*[@#$%^&+=!]).{8,}$\", passwd", passwd)){
             System.out.println("Password is Correct!");
         }else {
             System.out.println("Wrong Password!");
