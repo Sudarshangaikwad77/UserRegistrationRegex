@@ -9,6 +9,6 @@ public class UserRegistration
 
         user.checkFirstName();
         user.checkLastName();
-
+        user.checkValidEmail();
     }
 }
